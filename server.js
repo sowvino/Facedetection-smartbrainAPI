@@ -6,7 +6,7 @@ const register = require('./controllers/register.js');
 const signin = require('./controllers/signin.js');
 const profile = require('./controllers/profile.js');
 const image = require('./controllers/image.js');
-
+const port = 3000;
 
 
 
@@ -28,6 +28,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+//
+app.get('/', (req, res) => {
+    res.send("Its working!!!!");
+});
 
 //signing in the form
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) });
@@ -44,9 +48,7 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) });
 
 app.post('/imageurl', (req, res) => { image.handleApicall(req, res) });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || port, function () {
     console.log('app is working');
 });
 
-
-console.log(process.env.PORT);
