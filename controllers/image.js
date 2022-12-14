@@ -1,8 +1,12 @@
+require('dotenv').config();
+
+console.log(process.env.APIKEY)
+
 const handleApicall = (req, res) => {
   const raw = JSON.stringify({
     "user_app_id": {
-      "user_id": 'sowmi123',
-      "app_id": 'qa4p7rj46qrg'
+      "user_id": process.env.USERID,
+      "app_id": process.env.APPID
     },
     "inputs": [
       {
@@ -24,7 +28,7 @@ const handleApicall = (req, res) => {
       headers: {
         'Accept': 'application/json',
         // eslint-disable-next-line no-useless-concat
-        'Authorization': 'Key ' + '3d94fd1edbbd423fafae6335fe1cb1e6'
+        'Authorization': 'Key ' + process.env.APIKEY
       },
       body: raw
     })
