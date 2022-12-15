@@ -10,9 +10,6 @@ const port = 3000;
 require("dotenv").config();
 
 
-console.log(process.env.DB_PASSWORD);
-
-
 
 const db = knex({
     client: 'pg',
