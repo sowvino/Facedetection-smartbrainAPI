@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-console.log(process.env.APIKEY)
+
 
 const handleApicall = (req, res) => {
   const raw = JSON.stringify({

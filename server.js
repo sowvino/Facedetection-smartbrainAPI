@@ -2,10 +2,10 @@ const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
-const register = require('../controllers/register.js');
-const signin = require('../controllers/signin.js');
-const profile = require('../controllers/profile.js');
-const image = require('../controllers/image.js');
+const register = require('./controllers/register.js');
+const signin = require('./controllers/signin.js');
+const profile = require('./controllers/profile.js');
+const image = require('./controllers/image.js');
 const port = 3000;
 require("dotenv").config();
 
