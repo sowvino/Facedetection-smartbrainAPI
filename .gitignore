@@ -1,6 +1,7 @@
+# dependencies
 /node_modules
 
-
+# misc
 .env.local
 .env.development.local
 .env.test.local
