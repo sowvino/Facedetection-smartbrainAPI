@@ -19,7 +19,7 @@ const db = knex({
         user: "brain_data_user",
         port: 5432,
         database: "brain_data",
-        password: process.env.DB_PASSWORD,
+        password: 'dnu0G7pBhUAsZtoBbirmuHS8iwN0MWUB',
         ssl: true,
     }
 });

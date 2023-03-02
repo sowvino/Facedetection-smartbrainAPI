@@ -1,12 +1,9 @@
-require('dotenv').config();
-
-
 
 const handleApicall = (req, res) => {
   const raw = JSON.stringify({
     "user_app_id": {
-      "user_id": process.env.USERID,
-      "app_id": process.env.APPID
+      "user_id": 'sowmi123',
+      "app_id":'qa4p7rj46qrg'
     },
     "inputs": [
       {
