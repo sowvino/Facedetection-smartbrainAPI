@@ -28,7 +28,7 @@ const handleApicall = (req, res) => {
       headers: {
         'Accept': 'application/json',
         // eslint-disable-next-line no-useless-concat
-        'Authorization': 'Key ' + process.env.APIKEY
+        'Authorization': 'Key ' + '3d94fd1edbbd423fafae6335fe1cb1e6'
       },
       body: raw
     })
