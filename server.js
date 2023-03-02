@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan=require("morgan");
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
@@ -18,7 +19,7 @@ const db = knex({
         user: "brain_data_user",
         port: 5432,
         database: "brain_data",
-        password: "dnu0G7pBhUAsZtoBbirmuHS8iwN0MWUB",
+        password: process.env.DB_PASSWORD,
         ssl: true,
     }
 });
@@ -27,8 +28,10 @@ const db = knex({
 
 
 const app = express();
+app.use(morgan("tiny"));
+app.use(cors({ origin: "*", methods: "*" }));
 app.use(express.json());
-app.use(cors());
+
 
 //
 app.get('/', (req, res) => {
