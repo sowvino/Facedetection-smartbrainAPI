@@ -26,7 +26,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             .then(trx.commit)
             .catch(trx.rollback)
     })
-        .catch(err => res.status(400).json('unable to register the credentials'));
+        .catch(err => res.status(400).json('unable to register credentials'));
 }
 
 module.exports = {
